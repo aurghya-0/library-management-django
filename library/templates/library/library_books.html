@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Book List</h1>
+<table class="book-list">
+    <tr class="book-list-tr">
+        <th class="book-list-heading">Call No.</th>
+        <th class="book-list-heading">Book Name</th>
+        <th class="book-list-heading">Author Name</th>
+    </tr>
+    {% for book in books %}
+        <tr class="book-list-tr">
+            <td class="book-list-cell">{{ book.call_id }}</td>
+            <td class="book-list-cell">{{ book.book_name }}</td>
+            <td class="book-list-cell">
+                {% for author in book.book_author.all %}
+                    {{ author.first_name }} {{ author.last_name }},
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

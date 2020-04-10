@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+table.book-list {
+    border: 2px solid black;
+    border-spacing: 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr.book-list-tr {
+    transition: 0.3s;
+}
+
+tr.book-list-tr:nth-child(even) {background-color: #f2f2f2;}
+
+th.book-list-heading {
+    padding: 10px;
+    font-weight: bold;
+    background: dodgerblue;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+td.book-list-cell {
+    text-align: center;
+    padding: 5px;
+}
+
+tr.book-list-tr:hover {
+    background-color: darkslateblue;
+    color: white;
+
+}
